@@ -32,8 +32,3 @@ RUN adduser --system --shell /bin/bash --home /home/user --uid 99 --ingroup user
     sudo -u user mkdir /home/user/downloads
 
 VOLUME ["/home/user/.cache/lgogdownloader", "/home/user/.config/lgogdownloader", "/home/user/downloads"]
-
-# sudo -u user lgogdownloader --login
-# sudo -u user lgogdownloader --list
-# sudo -u user lgogdownloader --language=de,en --platform=all --save-serials --threads 10 --directory=/home/user/downloads --save-config
-# sudo -u user lgogdownloader --download
