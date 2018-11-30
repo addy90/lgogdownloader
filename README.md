@@ -10,5 +10,6 @@ Login to GOG via `lgogdownloader --login`
 
 **Important**: Set download folder `lgogdownloader --directory=/home/user/downloads --save-config`
 
-Now you can download your catalogue via `lgogdownloader --download` or set other options.
-See `lgogdownloader --help` for more information.
+Now you can download your catalogue via `lgogdownloader --download` or set other options, like number of download threads, save serial keys, and languages to download. See `lgogdownloader --help` for more information on this.
+
+Tip: Delete unnecessary old files via `lgogdownloader --check-orphans | xargs -i rm "{}"`. 
