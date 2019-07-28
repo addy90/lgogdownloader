@@ -10,9 +10,8 @@ RUN apt-get update && \
     liboauth-dev librhash-dev libtinyxml2-dev libhtmlcxx-dev libboost-system-dev \
     libboost-filesystem-dev libboost-program-options-dev libboost-date-time-dev \
     libboost-iostreams-dev libssl-dev zlib1g-dev && \
-    apt-get install -y build-essential help2man cmake pkg-config git
-
-RUN cd /tmp && \
+    apt-get install -y build-essential help2man cmake pkg-config git && \
+    cd /tmp && \
     git clone https://github.com/Sude-/lgogdownloader.git && \
     cd lgogdownloader && \
     mkdir build && \
@@ -21,13 +20,11 @@ RUN cd /tmp && \
     make && \
     make install && \
     cd /tmp && \
-    rm -rf lgogdownloader
-
-RUN apt-get purge -y build-essential help2man cmake pkg-config git && \
+    rm -rf lgogdownloader && \
+    apt-get purge -y build-essential help2man cmake pkg-config git && \
     apt-get autoremove --purge -y && \
-    apt-get clean
-
-RUN adduser --system --shell /bin/bash --home /home/user --uid 99 --ingroup users user && \
+    apt-get clean && \
+    adduser --system --shell /bin/bash --home /home/user --uid 99 --ingroup users user && \
     sudo -u user echo "umask 0000" > /home/user/.bashrc && \
     sudo -u user mkdir /home/user/downloads
 
