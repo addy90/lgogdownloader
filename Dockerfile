@@ -30,4 +30,5 @@ RUN apt-get update && \
 
 VOLUME ["/home/user/.cache/lgogdownloader", "/home/user/.config/lgogdownloader", "/home/user/downloads"]
 
-CMD ["su", "-", "user", "-c", "/bin/bash"]
+USER user
+WORKDIR /home/user
