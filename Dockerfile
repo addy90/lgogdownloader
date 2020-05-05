@@ -29,3 +29,5 @@ RUN apt-get update && \
     sudo -u user mkdir /home/user/downloads
 
 VOLUME ["/home/user/.cache/lgogdownloader", "/home/user/.config/lgogdownloader", "/home/user/downloads"]
+
+CMD ["su", "-", "user", "-c", "/bin/bash"]
