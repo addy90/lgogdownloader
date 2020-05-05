@@ -1,15 +1,16 @@
 # lgogdownloader
-Dockerfile for lgogdownloader with Unraid.
+Dockerfile for **lgogdownloader** with **Unraid**.
 
-Download in Unraid via Community Applications.
-Select the paths where to store cache, login information and downloads.
+Download in **Unraid** via **Community Applications**.
 
-Example: \
+Set the paths and following options: \
 `cache` set to `/mnt/user/appdata/lgogdownloader/cache/` \
 `config` set to `/mnt/user/appdata/lgogdownloader/config/` \
-`downloads` set to `/mnt/user/GOG/` (create share in advance)
+`downloads` set to `/mnt/user/GOG/` (create share in advance)\
+Set `Extra Parameters` to: `-it` and `Console shell command` to `Bash`. 
 
-Log into docker container via SSH shell `docker attach lgogdownloader` on Unraid or via Web-Terminal from Unraid Web-UI.
+Log into docker container via SSH shell `docker attach lgogdownloader` on Unraid \
+or via Web-Terminal from Unraid Web-UI.
 #### On first start:
 
 Login to GOG via: \
@@ -19,7 +20,8 @@ Login to GOG via: \
 `lgogdownloader --directory=/home/user/downloads --save-config`
 
 You can set more options, for example see the following command: \
-`lgogdownloader --language=de,en --platform=all --save-serials --threads 10 --info-threads 10 --save-config` \
+`lgogdownloader --language=de,en --platform=all --save-serials --threads 10 --info-threads 10 --save-config`
+
 See `lgogdownloader --help` for more information on this.
 
 Now you can download your catalogue via `lgogdownloader --download` 
