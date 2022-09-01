@@ -1,7 +1,7 @@
 # lgogdownloader
 Dockerfile for **lgogdownloader** with **Unraid**.
 
-Download in **Unraid** via **Community Applications**.
+Download in **Unraid** via **Apps** (**Community Applications**). Click on the link "Click Here To Get More Results From DockerHub" on the right side after searching for finding this app.
 
 Set the paths and following options: \
 `cache` set to `/mnt/user/appdata/lgogdownloader/cache/` \
