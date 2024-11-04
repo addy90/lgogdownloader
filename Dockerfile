@@ -7,7 +7,7 @@ ENV TERM xterm
 RUN apt-get update && \
     apt-get install -y apt-utils sudo && \
     apt-get install -y libcurl4-openssl-dev libboost-regex-dev libjsoncpp-dev \
-    librhash-dev libtinyxml2-dev libhtmlcxx-dev libboost-system-dev \
+    librhash-dev libtinyxml2-dev libtidy-dev libboost-system-dev \
     libboost-filesystem-dev libboost-program-options-dev libboost-date-time-dev \
     libboost-iostreams-dev libssl-dev zlib1g-dev && \
     apt-get install -y build-essential help2man cmake pkg-config git && \
