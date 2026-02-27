@@ -26,22 +26,28 @@ or via `Console` button in the Unraid Web-UI.
    Set download folder with this command: \
    `lgogdownloader --directory=/home/user/downloads --save-config`
 3. Now you can set more options, for example, see the following command: \
-   `lgogdownloader --language=de,en --platform=all --save-serials --threads 4 --info-threads 10 --save-config` \
+   `lgogdownloader --language=de,en --platform=w+l --save-serials --info-threads 10 --threads 4 --save-config`
 
 See `lgogdownloader --help` or `man lgogdownloader` for more information.
 
 #### From now on:
 
-1. You can download your catalogue via: `lgogdownloader --download`
-2. You can list old obsolete files via: `lgogdownloader --check-orphans`
-3. You can remove old obsolete files via: `lgogdownloader --check-orphans --delete-orphans`
+1. You can download your catalogue via: \
+   `lgogdownloader --download`
+2. You can list old obsolete files via: \
+   `lgogdownloader --check-orphans`
+3. You can remove old obsolete files via: \
+   `lgogdownloader --check-orphans --delete-orphans`
 
 #### Tips and tricks with a catalogue cache:
 
-1. You can create/update a cache that is valid for a certain time (by default 48 hours) via:
-   `lgogdownloader --update-cache` and you can use it while it is valid by adding `--use-cache` to other commands.\
+1. You can create/update a cache that is valid for a certain time (by default 48 hours) via: \
+   `lgogdownloader --update-cache` \
+   and you can use it while it is valid by adding `--use-cache` to other commands.\
    The cache makes repeated calls to listing the catalogue much faster.
-2. For example, you can download your catalogue after having created/updated the cache via:
+2. For example, you can download your catalogue after having created/updated the cache via: \
    `lgogdownloader --use-cache --download`
-3. You can check for orphaned files via: `lgogdownloader --use-cache --check-orphans`
-4. And you can delete orphaned files via: `lgogdownloader --use-cache --check-orphans --delete-orphans`
+3. You can check for orphaned files via: \
+   `lgogdownloader --use-cache --check-orphans`
+4. And you can delete orphaned files via: \
+   `lgogdownloader --use-cache --check-orphans --delete-orphans`
