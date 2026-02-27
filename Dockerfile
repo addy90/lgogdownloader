@@ -27,11 +27,11 @@ ENV TERM=xterm
 
 # extracted via apt-cache depends <libpackage-dev>
 RUN apt-get update && \
+    apt-get install -y man-db adduser && \
     apt-get install -y libcurl4t64 libboost-regex1.83.0 libjsoncpp26 librhash1 libtinyxml2-11 libtidy58 \
                        libboost-system1.83.0 libboost-filesystem1.83.0 libboost-program-options1.83.0 libboost-date-time1.83.0 \
-                       libboost-iostreams1.83.0 zlib1g
-
-RUN apt-get install -y man-db adduser && \
+                       libboost-iostreams1.83.0 zlib1g && \
+    apt-get clean && \
     mandb && \
     adduser --system --shell /bin/bash --home /home/user --uid 99 --ingroup users user
 
